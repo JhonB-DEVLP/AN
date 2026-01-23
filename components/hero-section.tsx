@@ -5,8 +5,8 @@ import { ArrowRight, Play, Sparkles } from "lucide-react"
 import CountUp from "react-countup"
 
 // --- Configuração do WhatsApp ---
-const WHATSAPP_NUMBER = "5511999999999" 
-const WHATSAPP_MESSAGE = "Gostaria de realizar um diagnóstico"
+const WHATSAPP_NUMBER = "5581999112895" 
+const WHATSAPP_MESSAGE = "Olá Jhon, tudo bem? Gostaria de realizar um diagnóstico"
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
 // --- Types & Interfaces ---

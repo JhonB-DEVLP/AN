@@ -24,27 +24,27 @@ interface ProcessStep {
 const reasons: ReasonItem[] = [
   {
     icon: Heart,
-    title: "Foco em Saúde",
-    description: "Desenvolvido exclusivamente para clínicas, não chatbots genéricos adaptados para saúde."
+    title: "Foco em saúde",
+    description: "Desenvolvemos assistentes de IA exclusivamente para clínicas, não chatbots genéricos adaptados para saúde."
   },
   {
     icon: Bot,
-    title: "Sem Bots Genéricos",
+    title: "Sem bots genéricos",
     description: "Cada assistente é treinado sob medida para os serviços e tom da sua clínica."
   },
   {
     icon: Shield,
-    title: "Design com Privacidade",
+    title: "Design com privacidade",
     description: "Desenvolvido com confidencialidade do paciente e proteção de dados como princípios fundamentais."
   },
   {
     icon: MessageCircle,
-    title: "Conversas Humanizadas",
+    title: "Conversas humanizadas",
     description: "Diálogo natural que os pacientes realmente gostam, não scripts robóticos."
   },
   {
     icon: Target,
-    title: "Feito para Conversão",
+    title: "Feito para conversão",
     description: "Projetado para agendar consultas, não apenas responder perguntas."
   }
 ]
@@ -71,7 +71,8 @@ const processSteps: ProcessStep[] = [
 // --- Sub-componentes ---
 
 const ReasonRow = ({ reason }: { reason: ReasonItem }) => (
-  <div className="flex gap-4">
+  // Adicionado text-left para manter a legibilidade interna do item, mesmo se o pai for center
+  <div className="flex gap-4 text-left">
     {/* Ícone com gradiente v4 */}
     <div className="w-10 h-10 rounded-lg bg-linear-to-br from-[#00f6ff]/15 to-[#00d1b6]/15 flex items-center justify-center shrink-0">
       <reason.icon className="w-5 h-5 text-[#00f6ff]" />
@@ -85,7 +86,7 @@ const ReasonRow = ({ reason }: { reason: ReasonItem }) => (
 
 const TimelineStep = ({ step, isLast }: { step: ProcessStep; isLast: boolean }) => (
   <>
-    <div className="flex items-start gap-4">
+    <div className="flex items-start gap-4 text-left">
       {/* Bolinha do Número */}
       <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#00f6ff] to-[#00d1b6] flex items-center justify-center shrink-0 shadow-lg shadow-[#00f6ff]/25">
         <span className="text-xl font-bold text-[#101719]">{step.number}</span>
@@ -111,7 +112,9 @@ export function WhyChooseUsSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Lado Esquerdo: Textos e Lista */}
-          <div>
+          {/* ADICIONADO: text-center (mobile) lg:text-left (desktop) */}
+          <div className="text-center lg:text-left">
+            
             {/* Badge Padronizada */}
             <span className="px-3 py-1 text-sm font-medium rounded-full bg-[#00f6ff]/10 text-[#00f6ff] border border-[#00f6ff]/20 inline-block mb-4">
               POR QUE NOS ESCOLHER
@@ -120,12 +123,15 @@ export function WhyChooseUsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
               Nem todos os assistentes IA são iguais
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Não vendemos bots genéricos. Não vendemos serviços. Nós vendemos soluções. Construímos assistentes inteligentes que entendem saúde, 
+            
+            {/* ADICIONADO: mx-auto lg:mx-0 para centralizar o bloco de texto no mobile */}
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Não vendemos bots genéricos. Não vendemos serviços. Nós vendemos soluções. Construímos assistentes inteligentes que entregam resultados reais para clínicas, 
               respeitam a privacidade do paciente e são projetados do zero para converter todos os seus leads em agendamentos e vendas.
             </p>
             
-            <div className="space-y-4">
+            {/* ADICIONADO: mx-auto lg:mx-0 e max-w para a lista não ficar muito larga no mobile */}
+            <div className="space-y-4 max-w-lg mx-auto lg:mx-0 lg:max-w-none">
               {reasons.map((reason) => (
                 <ReasonRow key={reason.title} reason={reason} />
               ))}

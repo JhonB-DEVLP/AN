@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, MessageCircle } from "lucide-react"
 
 // --- Configuração do WhatsApp ---
-const WHATSAPP_NUMBER = "5511999999999" 
-const WHATSAPP_MESSAGE = "Gostaria de realizar um diagnóstico"
+const WHATSAPP_NUMBER = "5581999112895"
+const WHATSAPP_MESSAGE = "Olá Jhon, tudo bem? Gostaria de realizar um diagnóstico"
 
 // Link formatado
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
@@ -13,26 +13,23 @@ export function CTASection() {
     <section className="relative py-16 lg:py-24 px-4 overflow-hidden">
       {/* Background gradient (Tailwind v4 syntax) */}
       <div className="absolute inset-0 bg-linear-to-r from-[#00f6ff] via-[#00d1b6] to-[#00f6ff]" />
-      
-      {/* Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2aDZ2LTZoLTZ2NnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
-      
+
       <div className="container relative mx-auto max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101719] mb-6 text-balance">
           Vamos criar o assistente de whatsapp da sua clínica hoje mesmo!
         </h2>
-        
+
         <p className="text-lg text-[#101719]/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Todos ficam satisfeitos conosco. Você será o nosso próximo case de sucesso da Nextech. Sem pressão de vendas. Vamos te apresentar na prática como a IA pode transformar 
+          Todos ficam satisfeitos conosco. Você será o nosso próximo case de sucesso da Nextech. Sem pressão de vendas. Vamos te apresentar na prática como a IA pode transformar
           a comunicação com seus pacientes e recuperar suas consultas perdidas.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          
+
           {/* Botão 1: Apenas visual (sem link por enquanto) */}
-          <Button 
-            size="lg" 
-            variant="secondary" 
+          <Button
+            size="lg"
+            variant="secondary"
             className="text-base px-8 py-6 gap-2 group bg-[#101719] text-[#ffffff] hover:bg-[#101719] font-semibold shadow-lg cursor-default"
           >
             <Calendar className="w-5 h-5" />
@@ -41,13 +38,13 @@ export function CTASection() {
           </Button>
 
           {/* Botão 2: WhatsApp (Com link funcional) */}
-          <Button 
+          <Button
             asChild
-            size="lg" 
-            variant="outline" 
+            size="lg"
+            variant="outline"
             className="text-base px-8 py-6 gap-2 bg-[#ffffff] text-[#000000] hover:bg-[#ffffff]/90 font-semibold shadow-lg cursor-pointer border-0"
           >
-            <a 
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
