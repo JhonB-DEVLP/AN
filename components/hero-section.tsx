@@ -103,7 +103,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 text-pretty leading-relaxed">
-          Respostas 24/7, agendamento automático, leads qualificados, follow-up, transferência perfeita para humanos 
+          Respostas 24/7, agendamento automático, triagem inteligente de pacientes, follow-up, transferência perfeita para humanos 
           e uma melhor experiência para o paciente. Tudo pelo WhatsApp.
         </p>
 
