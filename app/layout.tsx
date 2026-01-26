@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Nextech | Assistentes IA para WhatsApp de Clínicas',
-  description: 'Assistentes de WhatsApp com IA que automatizam conversas de clinicas, recuperam consultas perdidas e oferecem atendimento 24/7. Desenvolvido para clinicas medicas, odontologicas e esteticas.',
+  description: 'Assistentes de WhatsApp com IA que automatizam conversas de clínicas e consultórios, recuperando suas consultas perdidas e oferecendo atendimento 24/7.',
   icons: {
     icon: [
       {
