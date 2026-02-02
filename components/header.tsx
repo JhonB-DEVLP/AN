@@ -88,9 +88,9 @@ export function Header() {
           <Image 
             src="/Logo.png" 
             alt="Nextech Logo" 
-            className="h-8 md:h-10 w-auto object-contain" 
-            width={40} 
-            height={40} 
+            className="h-10 md:h-14 w-auto object-contain" 
+            width={60} 
+            height={60} 
           />
           <span className="font-bold text-2xl text-foreground">
             Nextech
